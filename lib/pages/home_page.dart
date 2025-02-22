@@ -8,8 +8,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child: Lottie.network(
-              'https://lottie.host/31b0c1dc-5ff1-45df-b96c-fa1200c8c554/QTcdtW0332.json')),
+        child: Lottie.asset(
+          "assets/animations/A2.json",
+          errorBuilder: (context, error, stackTrace) =>
+              const Text("Error loading animation"),
+        ),
+      ),
     );
   }
 }
