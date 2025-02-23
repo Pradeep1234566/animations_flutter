@@ -30,10 +30,18 @@ class HomePage extends StatelessWidget {
             child: ListView(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               children: const [
-                WeatherRow(day: 'Monday', temperature: '18°', icon: Icons.cloud),
-                WeatherRow(day: 'Tuesday', temperature: '20°', icon: Icons.wb_sunny),
-                WeatherRow(day: 'Wednesday', temperature: '15°', icon: Icons.nights_stay),
-                WeatherRow(day: 'Thursday', temperature: '22°', icon: Icons.cloud_queue),
+                WeatherRow(
+                    day: 'Monday', temperature: '18°', icon: Icons.cloud),
+                WeatherRow(
+                    day: 'Tuesday', temperature: '20°', icon: Icons.wb_sunny),
+                WeatherRow(
+                    day: 'Wednesday',
+                    temperature: '15°',
+                    icon: Icons.nights_stay),
+                WeatherRow(
+                    day: 'Thursday',
+                    temperature: '22°',
+                    icon: Icons.cloud_queue),
               ],
             ),
           ),
