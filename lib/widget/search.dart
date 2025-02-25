@@ -1,3 +1,4 @@
+import 'package:animations/widget/IntroPage4.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -27,13 +28,13 @@ class IntroPage3 extends StatelessWidget {
               fontStyle: FontStyle.italic, // Added italic style
             ),
           ),
-          SizedBox(height: 20), // Add some space between the text and the button
+          SizedBox(
+              height: 20), // Add some space between the text and the button
           ElevatedButton(
             onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text("See you Saturday evening!"),
-                ),
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => IntroPage4()),
               );
             },
             child: Text("Yes"),
@@ -43,3 +44,5 @@ class IntroPage3 extends StatelessWidget {
     );
   }
 }
+
+
