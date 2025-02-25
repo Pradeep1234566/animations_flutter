@@ -1,24 +1,29 @@
-// widgets/search_bar.dart
-
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
-class SearchBarWidget extends StatelessWidget {
-  const SearchBarWidget({super.key});
+class IntroPage3 extends StatelessWidget {
+  const IntroPage3({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      decoration: InputDecoration(
-        filled: true,
-        fillColor: Colors.grey[800],
-        hintText: 'Search city...',
-        prefixIcon: const Icon(Icons.search, color: Colors.white),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(30),
-          borderSide: BorderSide.none,
-        ),
+    return Container(
+      width: double.infinity,
+      color: Colors.yellowAccent,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          AspectRatio(
+            aspectRatio: 1, // Adjust the aspect ratio as needed
+            child: Lottie.asset("assets/animations/Date.json"),
+          ),
+          SizedBox(
+              height: 20), // Add some space between the animation and the text
+          Text(
+            "Go out on a date",
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+        ],
       ),
-      style: const TextStyle(color: Colors.white),
     );
   }
 }

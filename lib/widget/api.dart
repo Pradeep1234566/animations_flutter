@@ -1,18 +1,29 @@
-import 'dart:convert';
-import 'package:http/http.dart' as http;
+import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
-Future<void> fetchWeather() async {
-  final response = await http.get(
-    Uri.parse(
-        'https://api.openweathermap.org/data/2.5/weather?q=London&appid=87cf8f6bff87e4721cf943cdad00595a&units=metric'),
-  );
+class IntroPage1 extends StatelessWidget {
+  const IntroPage1({super.key});
 
-  if (response.statusCode == 200) {
-    // If the server returns a 200 OK response, parse the JSON.
-    final Map<String, dynamic> data = json.decode(response.body);
-    print('Weather in London: ${data['main']['temp']}°C');
-  } else {
-    // If the server did not return a 200 OK response, throw an exception.
-    throw Exception('Failed to load weather data');
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      color: Colors.yellowAccent,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          AspectRatio(
+            aspectRatio: 1, // Adjust the aspect ratio as needed
+            child: Lottie.asset("assets/animations/Boy.json"),
+          ),
+          SizedBox(
+              height: 20), // Add some space between the animation and the text
+          Text(
+            "This week me",
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+        ],
+      ),
+    );
   }
 }
