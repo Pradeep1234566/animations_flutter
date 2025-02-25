@@ -8,7 +8,7 @@ class IntroPage1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      color: Colors.yellowAccent,
+      color: Colors.pinkAccent,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -19,8 +19,13 @@ class IntroPage1 extends StatelessWidget {
           SizedBox(
               height: 20), // Add some space between the animation and the text
           Text(
-            "This week me",
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            "This week me ",
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Colors.white, // Changed text color to white
+              fontStyle: FontStyle.italic, // Added italic style
+            ),
           ),
         ],
       ),

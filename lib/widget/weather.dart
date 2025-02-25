@@ -8,7 +8,7 @@ class IntroPage2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      color: Colors.yellowAccent,
+      color: Colors.pinkAccent, // Changed to a romantic color
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -20,7 +20,12 @@ class IntroPage2 extends StatelessWidget {
               height: 20), // Add some space between the animation and the text
           Text(
             "and you",
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Colors.white, // Changed text color to white
+              fontStyle: FontStyle.italic, // Added italic style
+            ),
           ),
         ],
       ),

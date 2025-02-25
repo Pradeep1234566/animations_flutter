@@ -8,7 +8,7 @@ class IntroPage3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      color: Colors.yellowAccent,
+      color: Colors.pinkAccent,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -20,7 +20,23 @@ class IntroPage3 extends StatelessWidget {
               height: 20), // Add some space between the animation and the text
           Text(
             "Go out on a date",
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Colors.white, // Changed text color to white
+              fontStyle: FontStyle.italic, // Added italic style
+            ),
+          ),
+          SizedBox(height: 20), // Add some space between the text and the button
+          ElevatedButton(
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text("See you Saturday evening!"),
+                ),
+              );
+            },
+            child: Text("Yes"),
           ),
         ],
       ),
